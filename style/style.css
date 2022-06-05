@@ -10,22 +10,59 @@
     grid-template-rows: auto 1fr auto; /*armo 3 filas*/
 }
 
-.border {/*borde del cuadro de la seccion EVENTOS*/
+.borderE {/*borde del cuadro de la seccion EVENTOS*/
     border: 1px solid black;
 }
+
+.efectoLogo:hover {
+	-webkit-animation: efectoLogo 0.9s both;
+	        animation: efectoLogo 0.9s both;
+}
+
+@keyframes efectoLogo {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 
 header{ 
     display: flex; /*mando todo el menu a una fila*/
-    flex-wrap: wrap;
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    flex-wrap: wrap;    
     align-items: center;
     justify-content: space-between;
     align-content: center;
     padding: 15px 15px;
-     
-    
+   
 }
+.color-change-2x {/*clase de la animacion de fondo del menu de botones en header*/
+	-webkit-animation: color-change-2x 2s linear infinite alternate both;
+	        animation: color-change-2x 2s linear infinite alternate both;
+}
+
+@keyframes color-change-2x { /*animacion del menu de header*/
+    0% {
+      background: #19dcea;
+    }
+    100% {
+      background: #b22cff;
+    }
+  }
+
+
+/*
+header{ fondo en degrade por si me canso de la animacion lo dejo aca
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+}*/
+
+
 
 .header__menuBotones{ /*ul*/
     list-style: none;
@@ -34,19 +71,71 @@ header{
     padding: 0.5rem 1rem;
 }
 
-.header__botones{  /*li*/
-    margin-left: 2rem;
-    background-color: white;
-    padding: 0.5rem 1rem;
-    
-    
-}
+
 
 .subrayado{ /*le saco el subrayado a los botones del menu*/
+    margin-left: 2rem;
+    background-color: white;
     text-decoration: none;
-    color: rgb(158, 10, 151);
-    padding: 0.5rem 1rem;
+    color: black;
+    padding: 0.5rem 1.5rem;
+    
 }
+.subrayado:hover{ /*se pone amarillo el fondo cuando pasamos por arriba*/
+background-color: yellow;
+}
+
+
+
+.vibrate-1:hover { /*hago vibrar los botones al pasar por arriba*/
+	-webkit-animation: vibrate-1 0.3s linear infinite both;
+	        animation: vibrate-1 0.3s linear infinite both;
+
+}
+
+@-webkit-keyframes vibrate-1 { /*animaciones de los botones, vibran al pasar por arriba*/
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.blink-1:hover { /*efecto sobre las fotos de la seccion fotos*/
+	-webkit-animation: blink-1 0.6s  both;
+	        animation: blink-1 0.6s  both;
+}
+
+@keyframes blink-1 {/*efecto sobre las fotos de la seccion fotos*/
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
 
 .hero {
     display: grid;
@@ -90,10 +179,10 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,0.13769257703
     padding: 20px 25px;
     column-gap: 2rem;
     background-color: rgb(52, 53, 50);
-    height: 100%;
+    
     align-content: center;
     text-align:justify;
-    align-items: center;
+    
     
 
 }
@@ -373,10 +462,13 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
 
     .header__menuBotones{ /*ul*/
          list-style: none;
-         display: flex;    
+         display: block;    
          flex-direction: column; /*hago una sola columna de logotipo y los botones*/ 
          padding: 0.5rem 1rem;
+                                            
     }
+
+
 
 
     .hero__contenedor{
