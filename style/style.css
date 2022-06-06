@@ -128,6 +128,23 @@ text-align: center;
     text-align: center;
 }
 
+.tracking-in-expand:hover { /*titulo destacado de seccion indice le aplico un efecto */
+	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes tracking-in-expand { /*titulo destacado de seccion indice le aplico un efecto */
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 
 
 footer{
