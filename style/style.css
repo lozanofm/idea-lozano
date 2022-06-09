@@ -48,10 +48,10 @@ header{
 
 @keyframes color-change-2x { /*animacion del menu de header*/
     0% {
-      background: #19dcea;
+      background: #6e3806;
     }
     100% {
-      background: #b22cff;
+      background: #116418;
     }
   }
 
@@ -83,6 +83,7 @@ header{ fondo en degrade por si me canso de la animacion lo dejo aca
 }
 .subrayado:hover{ /*se pone amarillo el fondo cuando pasamos por arriba*/
 background-color: yellow;
+border: solid black 1px;
 }
 
 
@@ -428,6 +429,10 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
 
 }
 
+.fondoEjercicio{
+    background-image: url(../imagenes/fondoejercicios3.jpg);
+}
+
 /*MEDIAS QUERIES*/
 @media screen and (max-width: 425px){ /*FORMATO CELULAR*/
 
@@ -507,6 +512,9 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     
     }
 
-
-
 }
+@media (min-width: 992px) { 
+    .alto-100{
+        height: 100vh;
+    }
+ }
