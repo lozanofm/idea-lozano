@@ -31,6 +31,11 @@
     }
   }
 
+  .tipografiaRoboto{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+  }
+
 
 header{ 
     display: flex; /*mando todo el menu a una fila*/
@@ -81,6 +86,20 @@ header{ fondo en degrade por si me canso de la animacion lo dejo aca
     padding: 0.5rem 1.5rem;
     
 }
+.subrayado__local{
+    margin-left: 2rem;
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid white;
+
+}
+
+
+
+
+
 .subrayado:hover{ /*se pone amarillo el fondo cuando pasamos por arriba*/
 background-color: yellow;
 border: solid black 1px;
@@ -342,7 +361,7 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     
  }
 
- .seccionfotografias{ /*grid padre en seccion fotos*/
+ /*.seccionfotografias{ /*grid padre en seccion fotos*/
      display: grid;
      grid-gap: 10px 15px; 
      grid-template-columns: 1fr 1fr 1fr 1fr; 
@@ -408,9 +427,9 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     color: transparent;
  }
 
- .fondoaccesorios{
-    background: rgb(131,58,180);
-    background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+ .fondoAccesorios{
+background-image: url(../imagenes/fondoaccesorios.jpg);
+    
  }
 
  .seccion__accesorios{ /*grid padre en seccion accesorios*/
@@ -423,11 +442,24 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
 
  }
 
+ .form-control{
+     border: 0px;
+ }
+ 
+
  .accesorios1{ /*hijo en seccion accesorios*/
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 10px 15px;
 
 }
+
+
+
+.bordeAccesorio:hover{ /*se pone amarillo el fondo cuando pasamos por arriba*/
+    outline: dotted black 5px;
+    }
 
 .fondoEjercicio{
     background-image: url(../imagenes/fondoejercicios3.jpg);

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css"><!--vinculamos CSS-->
+   
     <link rel="preconnect" href="https://fonts.googleapis.com"><!--instalo la fuente Roboto Condensed-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>CONTACTO Clean</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/style.css"><!--vinculamos CSS-->
 </head>
 <body class="seccionContacto">
     <header class="header color-change-2x"><!--armamos el menu con flex-->
@@ -19,74 +21,71 @@
                 <li class="vibrate-1"><a class="subrayado" href="../secciones/fotos.html">FOTOS</a></li>
                 <li class="vibrate-1"><a class="subrayado" href="../secciones/ejercicios.html">EJERCICIOS</a></li>
                 <li class="vibrate-1"><a class="subrayado" href="../secciones/accesorios.html">ACCESORIOS</a></li>
-                <li class="vibrate-1"><a class="subrayado" href="../secciones/contacto.html">CONTACTO</a></li>
+                <li class="vibrate-1"><a class="subrayado__local" href="../secciones/contacto.html">CONTACTO</a></li>
 
             </ul>
         </nav>
     </header>
-<main>
-    <h2 class="textoFormulario">CONTACTATE CON NOSOTROS</h2>
-</main>
+    <div class="container mt-5 mb-5 ">
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column justify-content-center bg-primary bg-opacity-50">
 
-    <section>
-                
-        <div class="formulario" >
-            <h1>CONTACTENOS</h1>
-            <form action="" method="get" enctype="text/plain"><!--armado del formulario  de datos personales-->
-                <fieldset>
-                    <legend>
-                        <p> INGRESE SUS DATOS PARA SER CONTACTADO POR UN AGENTE:</p>
-                    </legend><br>
-                    <p>SEXO:</p>
-                    <div>
-                        <input type="radio" id="hombre" name="sexo" value="hombre"/>HOMBRE
-                        <input type="radio" id="mujer" name="sexo" value="mujer"/>MUJER
-                    </div>
-                    <br>
-                    <label for="Nombre">NOMBRE</label><br>
-                    <input type="text" name="Nombre" value="Nombre"/>
-                    <br>
-                    <label for="Apellido">APELLIDO</label><br>
-                    <input type="text" name="Apellido" value="Apellido"/>
-                    <br><br>
-                    <label for="email">Ingrese su E-mail:</label><br>
-                    <input type="email" name="email" value="email"/>
-                    <input type="Submit" value="Submit">
-                    <br>
-                    <p>ESTADO CIVIL:</p>
-                    <input list="browsers" name="browser">
-                    <datalist id="browsers">
-                        <option value="Soltero">
-                        <option value="Casado">
-                        <option value="Divorciado">                        
-                    </datalist>
-                    <input type="Submit">
-                    <br><br>
-                    <p>ACTIVIDAD</p>
-                    <input type="checkbox" id="Crossfit" name="box" value="crossfit">
-                    <label for="crossfit">Crossfit</label>
-                    <input type="checkbox" id="funcional" name="box" value="funcional">
-                    <label for="funcional">funcional</label>
-                    <input type="checkbox" id="gimnasio" name="box" value="gimnasio
-                    <label for="gimnasio">Gimnasio</label>
-                    <br><br>
-                    <p>COMENTARIOS</p>
-                    <textarea name="message" cols="60" rows="10">Escribe tus comentarios...</textarea>
-                    <br>
-                    <input type="submit">  
-                    <input type="reset">                           
-
-
-                </fieldset>
-            </form>
-            
+    <form class="was-validated ">
+        <div class="mb-3">
+          <label for="validationTextarea" class="form-label">CONTACTANOS</label>
+          <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Escribi tu consulta..." required></textarea>
+          <div class="invalid-feedback text-light bg-dark">
+            Por favor, ingresa tu mensaje en el area de texto.
+          </div>
         </div>
-        <footer>
-            <a href="../index.html"><img class="footer__logo" src="../imagenes/logotipo.jpg" alt="logotipo clean"></a>
-        </footer>
-        
-    </section>
+      
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="validationFormCheck1" required>
+          <label class="form-check-label text-dark" for="validationFormCheck1 ">Check this checkbox</label>
+          <div class="invalid-feedback text-dark">Example invalid feedback text</div>
+        </div>
+      
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="validationFormCheck2" name="radio-stacked" required>
+          <label class="form-check-label text-dark" for="validationFormCheck2">Toggle this radio</label>
+        </div>
+        <div class="form-check mb-3">
+          <input type="radio" class="form-check-input" id="validationFormCheck3" name="radio-stacked" required>
+          <label class="form-check-label text-dark" for="validationFormCheck3">Or toggle this other radio</label>
+          <div class="invalid-feedback text-dark">More example invalid feedback text</div>
+        </div>
+      
+        <div class="mb-3">
+          <select class="form-select " required aria-label="select example">
+            <option value="">Open this select menu</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+          <div class="invalid-feedback text-dark">Example invalid select feedback</div>
+        </div>
+      
+        <div class="mb-3">
+          <input type="file" class="form-control" aria-label="file example" required>
+          <div class="invalid-feedback text-dark">Example invalid form file feedback</div>
+        </div>
+      
+        <div class="mb-3">
+          <button class="btn btn-primary" type="submit" disabled>Submit form</button>
+        </div>
+      </form>
+    </div>
+</div>
+</div>
 
+<footer>
+    <a href="../index.html"><img class="footer__logo" src="../imagenes/logotipo.jpg" alt="logotipo clean"></a>
+</footer>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     
 </body>
 </html>
