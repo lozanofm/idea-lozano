@@ -5,14 +5,13 @@
     box-sizing: border-box;
 }
 
+
 .bodyIndex{
     display: grid; /*armo la grilla para el cuerpo del index*/
     grid-template-rows: auto 1fr auto; /*armo 3 filas*/
 }
 
-.borderE {/*borde del cuadro de la seccion EVENTOS*/
-    border: 1px solid black;
-}
+
 
 .efectoLogo:hover {
 	-webkit-animation: efectoLogo 0.9s both;
@@ -268,66 +267,18 @@ footer{
     width: 100px;
 }
 
-#grilla{ /*corresponde al cuadro de LA SECCCION EVENTOS*/
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 100px 1fr 1fr 75px; 
-    grid-template-columns: 20% auto 15%;
-    grid-template-areas:
-         "gym gym gym"
-         "productos servicios aside"
-         "productos servicios aside"
-         "productos dumbell barra";
-
-  background-color: rgb(224, 38, 165); 
-
-}
-
-section#gym{/*corresponde al cuadro de LA SECCCION EVENTOS*/
-    grid-area: gym;
-    background-color: rgb(146, 150, 146);
-    overflow: hidden;
-    overflow: scroll;
-
-}
 
 
-section#productos{/*corresponde al cuadro de LA SECCCION EVENTOS*/
-    grid-area: productos;
-    background-color: rgb(232, 245, 50);
-}
 
-section#servicios{/*corresponde al cuadro de LA SECCCION EVENTOS*/
-    grid-area: servicios;
-    background-color: aqua; 
-    display: flex;
-    justify-content: space-between;
-    justify-content: flex-start;
-    overflow: hidden;
-    overflow: scroll;
-    
-     
-}
 
-section#dumbell{/*corresponde al cuadro de LA SECCCION EVENTOS*/
-    grid-area: dumbell;
-    background-color: blueviolet;
-    overflow: hidden;
-    overflow: scroll;
-}
 
-section#barra{/*corresponde al cuadro de LA SECCCION EVENTOS*/
-    grid-area: barra;
-    background-color: darkolivegreen;
-}
 
-aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
-    grid-area: aside;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
+
+
+
+
+
+
 
 .formulario{ /*corresponde SECCION CONTACTOS*/
     display: flex;

@@ -1,0 +1,204 @@
+
+
+$contornoNegro: 1px solid black; /*variable*/
+
+
+*{
+    font-family: 'Roboto Condensed', sans-serif; /*toda la pagina utilizará esta tipografía*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+ 
+header{ 
+    display: flex; /*mando todo el menu a una fila*/
+    flex-wrap: wrap;    
+    align-items:center;
+    justify-content: space-between;
+    align-content: center;
+    padding: 15px 15px;
+    
+}
+
+.header__menuBotones{ /*ul*/
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+}
+
+.color-change-2x {/*clase de la animacion de fondo del menu de botones en header*/
+	-webkit-animation: color-change-2x 2s linear infinite alternate both;
+	        animation: color-change-2x 2s linear infinite alternate both;
+}
+
+@keyframes color-change-2x { /*animacion del menu de header*/
+    0% {
+      background: #6e3806;
+    }
+    100% {
+      background: #116418;
+    }
+  }
+
+.efectoLogo:hover { /*logotipo de la pagina en general(clean)*/
+	-webkit-animation: efectoLogo 0.9s both;
+	        animation: efectoLogo 0.9s both;
+}
+
+@keyframes efectoLogo { /*animacion que se anida de efectologo de la pagina general(clean)*/
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .vibrate-1:hover { /*hago vibrar los botones del menu al pasar por arriba*/
+	-webkit-animation: vibrate-1 0.3s linear infinite both;
+	        animation: vibrate-1 0.3s linear infinite both;
+
+}
+
+@-webkit-keyframes vibrate-1 { /*animaciones de los botones, vibran al pasar por arriba*/
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  20% {
+    -webkit-transform: translate(-2px, 2px);
+            transform: translate(-2px, 2px);
+  }
+  40% {
+    -webkit-transform: translate(-2px, -2px);
+            transform: translate(-2px, -2px);
+  }
+  60% {
+    -webkit-transform: translate(2px, 2px);
+            transform: translate(2px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(2px, -2px);
+            transform: translate(2px, -2px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+.subrayado{ /*le saco el subrayado a los botones del menu*/
+  margin-left: 2rem;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem 1.5rem;
+
+  &__local{
+      margin-left: 2rem;
+      background-color: black;
+      text-decoration: none;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border: 1px solid white;
+  
+  }
+  
+}
+.subrayado:hover{ /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
+  background-color: yellow;
+  border: solid black 1px;
+  }
+
+
+#grilla{ /*corresponde al cuadro de LA SECCCION EVENTOS, es el esqueleto/maqueta de la estructura*/
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 100px 1fr 1fr 75px; 
+        grid-template-columns: 20% auto 15%;
+        grid-template-areas:
+             "gym gym gym"
+             "productos servicios aside"
+             "productos servicios aside"
+             "productos dumbell barra";
+    
+      background-color: rgb(224, 38, 165); 
+    
+}
+
+section#gym{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+    grid-area: gym;
+    background-color: rgb(146, 150, 146);
+    overflow: hidden;
+    overflow: scroll;
+
+}
+section#productos{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+    grid-area: productos;
+    background-color: rgb(232, 245, 50);
+}
+
+section#servicios{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+    grid-area: servicios;
+    background-color: aqua; 
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-start;
+    overflow: hidden;
+    overflow: scroll;
+
+}
+section#dumbell{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+    grid-area: dumbell;
+    background-color: blueviolet;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+section#barra{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+    grid-area: barra;
+    background-color: darkolivegreen;
+}
+
+aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+    grid-area: aside;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.borderE {/*borde del cuadro de la seccion EVENTOS*/
+    border:$contornoNegro; /*aca utilice una variable definica arriba del main.scss*/
+}
+
+.tipografiaRoboto{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    
+  }
+
+  footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    padding: 15px 15px;
+}
+
+.footer__logo{
+    width: 100px;
+}
+
+
+
+
+
+
+
+
