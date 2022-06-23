@@ -3,6 +3,7 @@
 @import "./parciales/variables"; /*variable*/
 @import "./parciales/mixin"; /*mixin*/
 @import "./parciales/extend"; /*extend*/
+@import "./parciales/maps"; /*extend*/
 
 
 
@@ -238,6 +239,27 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
   position: relative;
 }
 
+.cuadroContacto{/*en la seccion contacto*/
+  border: solid;
+  width: 650px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: 
+      linear-gradient(
+          60deg,
+          #f7f4f8,
+          #0c1114);
+
+}
+
+
+
+
+
+
+
 footer{
     display: flex;
     justify-content: center;
@@ -325,13 +347,26 @@ footer{
   
   }
 
+  .cuadroContacto{/*seccion contacto botones de abajo*/
+    display: none;
+  }
+
 }
 
 @media (min-width: 992px) { 
   .alto-100{
       height: 100vh;
   }
+ 
 }
+
+@media screen and (max-width: 799px){ 
+  .cuadroContacto{/*seccion contacto botones de abajo*/
+    display: none;
+  }
+}
+
+
 
 
 

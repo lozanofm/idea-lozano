@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*variable*/
 .marco1 {
+  /*en la seccion eventos utilice mixin*/
   border: solid;
   border-image-slice: 1;
   border-width: 4px;
@@ -8,6 +9,7 @@
 }
 
 .marco2 {
+  /*en la seccion eventos utilice mixin*/
   border: solid;
   border-image-slice: 1;
   border-width: 4px;
@@ -15,6 +17,7 @@
 }
 
 .marco3 {
+  /*en la seccion eventos utilice mixin*/
   border: solid;
   border-image-slice: 1;
   border-width: 4px;
@@ -22,6 +25,56 @@
 }
 
 /*mixin*/
+.botonContacto, .botonContacto_2, .botonContacto_1 {
+  /*seccion contacto*/
+  border: 1px solid black;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(57, 229, 235);
+}
+
+.botonContacto_1 {
+  background-color: rgb(37, 187, 192);
+}
+
+.botonContacto_2 {
+  background-color: rgb(46, 136, 163);
+}
+
+.botonContacto:hover, .botonContacto_1:hover, .botonContacto_2:hover {
+  /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
+  background-color: rgb(247, 247, 239);
+  border: solid black 1px;
+}
+
+/*extend*/
+/*aplico maps en la seccion contactos, en los botones del final*/
+.a {
+  color: #f00808;
+}
+
+/*aplico maps en la seccion contactos, en los botones del final*/
+.b {
+  color: #da4a07;
+}
+
+/*aplico maps en la seccion contactos, en los botones del final*/
+.c {
+  color: #d9f00b;
+}
+
+/*aplico maps en la seccion contactos, en los botones del final*/
+.tamFuente {
+  color: 30px;
+}
+
+.fase {
+  /*boton seccion contacto/ boton intermedio, llamo una propiedad con map-get*/
+  font-size: 30px;
+}
+
 /*extend*/
 * {
   font-family: "Roboto Condensed", sans-serif;
@@ -282,6 +335,17 @@ aside {
   position: relative;
 }
 
+.cuadroContacto {
+  /*en la seccion contacto*/
+  border: solid;
+  width: 650px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+  border-image-slice: 1;
+  border-width: 3px;
+  border-image-source: linear-gradient(60deg, #f7f4f8, #0c1114);
+}
+
 footer {
   display: flex;
   justify-content: center;
@@ -368,9 +432,20 @@ footer {
     text-align: justify;
     align-items: center;
   }
+
+  .cuadroContacto {
+    /*seccion contacto botones de abajo*/
+    display: none;
+  }
 }
 @media (min-width: 992px) {
   .alto-100 {
     height: 100vh;
+  }
+}
+@media screen and (max-width: 799px) {
+  .cuadroContacto {
+    /*seccion contacto botones de abajo*/
+    display: none;
   }
 }/*# sourceMappingURL=main.css.map */

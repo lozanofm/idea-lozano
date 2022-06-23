@@ -1,0 +1,23 @@
+.botonContacto  { /*seccion contacto*/
+    border: $contornoNegro;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(57, 229, 235)
+  }
+  
+  .botonContacto_1{
+    @extend .botonContacto;
+    background-color: rgb(37, 187, 192);
+  }
+  
+  .botonContacto_2{
+    @extend .botonContacto;
+    background-color: rgb(46, 136, 163);
+  }
+
+  .botonContacto:hover{ /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
+    background-color: rgb(247, 247, 239);
+    border: solid black 1px;
+    }
