@@ -1,6 +1,10 @@
 
 
-$contornoNegro: 1px solid black; /*variable*/
+@import "./parciales/variables"; /*variable*/
+@import "./parciales/mixin"; /*mixin*/
+@import "./parciales/extend"; /*extend*/
+
+
 
 
 *{
@@ -39,7 +43,7 @@ header{
       background: #6e3806;
     }
     100% {
-      background: #116418;
+      background: #610659;
     }
   }
 
@@ -100,7 +104,7 @@ header{
   color: black;
   padding: 0.5rem 1.5rem;
 
-  &__local{
+  &__local{ /*color negro en el boton de la pagina donde estamos posicionados*/
       margin-left: 2rem;
       background-color: black;
       text-decoration: none;
@@ -128,25 +132,25 @@ header{
              "productos servicios aside"
              "productos dumbell barra";
     
-      background-color: rgb(224, 38, 165); 
+      background-color: rgb(214, 228, 24); 
     
 }
 
 section#gym{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     grid-area: gym;
-    background-color: rgb(146, 150, 146);
+    background-color: rgb(93, 155, 212);
     overflow: hidden;
     overflow: scroll;
 
 }
 section#productos{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     grid-area: productos;
-    background-color: rgb(232, 245, 50);
+    background-color: rgb(192, 180, 192);
 }
 
 section#servicios{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     grid-area: servicios;
-    background-color: aqua; 
+    background-color: rgb(15, 131, 92); 
     display: flex;
     justify-content: space-between;
     justify-content: flex-start;
@@ -175,15 +179,66 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
 }
 
 .borderE {/*borde del cuadro de la seccion EVENTOS*/
-    border:$contornoNegro; /*aca utilice una variable definica arriba del main.scss*/
+    border:$contornoNegro; /*aca utilice una variable que esta guardada en la carpeta variables.scss y la invoco al principio de main*/
 }
 
 .tipografiaRoboto{
     font-family: 'Barlow Semi Condensed', sans-serif;
     
+}
+
+.seccionfotos{ /*fondo fotos*/
+    background-image: url(../imagenes/fondofotos.jpg);
+    
+}
+.fondoEjercicio{/*fondo ejercicios*/
+  background-image: url(../imagenes/fondoejercicios3.jpg);
+}
+
+.seccionContacto{ /*fondo contatco*/
+  background-image: url(../imagenes/fondoformulario.jpg);
+
+}
+
+.fondoAccesorios{ /*fondo accesorios*/
+  background-image: url(../imagenes/fondoaccesorios.jpg);
+      
+   }
+
+.accesorios1{ /*hijo en seccion accesorios*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 10px 15px;
+
+}
+
+.bordeAccesorio:hover{ /*se pone amarillo el fondo cuando pasamos por arriba*/
+  outline: dotted black 5px;
   }
 
-  footer{
+.bodyIndex{
+    display: grid; /*armo la grilla para el cuerpo del index*/
+    grid-template-rows: auto 1fr auto; /*armo 3 filas*/
+}
+
+
+.sectionContenedor{ /*contiene las 3 columnas del index abajo*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);/*3 columnas de 1 fraccion*/
+  padding: 20px 25px;
+  column-gap: 2rem;
+  background-color: black;
+  align-content: center;
+  text-align:start;
+  
+}
+
+.sectionContenedor__imagen{ /*en el index*/
+  position: relative;
+}
+
+footer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,6 +250,88 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     width: 100px;
 }
 
+/*MEDIAS QUERIES*/
+@media screen and (max-width: 425px){ /*FORMATO CELULAR*/
+
+  .bodyIndex{
+      display: grid; /*armo la grilla para el cuerpo del index*/
+      grid-template-columns: 1fr;
+  }
+
+
+  #grilla{ /*corresponde al cuadro de LA SECCCION EVENTOS*/
+      grid-template-columns:1fr; /*PASA TODO A 1 SOLA COLUMNA*/
+      grid-template-areas:
+      "gym"
+      "productos" 
+      "dumbell";     
+     background-color: rgb(8, 8, 99); 
+    
+  }
+
+  section#barra{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+      display: none; /*desaparece en el formato celular*/
+
+  }
+  section#servicios{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+      display: none; /*desaparece en el formato celular*/
+              
+  }
+
+  aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+      display: none; /*desaparece en el formato celular*/
+
+  }
+
+  header{ 
+      display: flex; 
+      flex-direction: column;
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      justify-content: center; /*centro el logotipo y los botones*/
+      padding: 15px 15px;
+               
+  }    
+  .hero {
+      display: none;
+
+         
+  }
+
+  .header__menuBotones{ /*ul*/
+       list-style: none;
+       display: block;    
+       flex-direction: column; /*hago una sola columna de logotipo y los botones*/ 
+       padding: 0.5rem 1rem;
+                                          
+  }
+
+
+  .hero__contenedor{
+      display: none;
+       
+  }
+
+  .sectionContenedor{ 
+      display: grid;
+      grid-template-columns: 1fr;/*AHORA PASO TODO A UNA COLUMNA*/
+      padding: 20px 25px;
+      column-gap: 2rem;
+      background-color: rgb(52, 53, 50);
+      height: 100%;
+      align-content: center;
+      text-align:justify;
+      align-items: center;
+      
+  
+  }
+
+}
+
+@media (min-width: 992px) { 
+  .alto-100{
+      height: 100vh;
+  }
+}
 
 
 

@@ -1,0 +1,22 @@
+@mixin marco {
+    border: solid;
+    border-image-slice: 1;
+    border-width: 4px;
+    border-image-source: 
+        linear-gradient(
+            60deg,
+            #b16ec4,
+            #5f97b9);
+    
+}
+.marco1{
+    @include marco;
+}
+
+.marco2{
+    @include marco;
+}
+
+.marco3{
+    @include marco;
+}
