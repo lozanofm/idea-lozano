@@ -15,7 +15,33 @@
     box-sizing: border-box;
 }
 
+.bienvenidos{
+  font-size: 3em;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-family: 'Roboto Condensed', sans-serif;
+  background: url(../imagenes/raya.jpg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text 7.5s linear infinite;
+  text-align: center;
+  margin-top: 10px;
+}
 
+@keyframes text{
+  from { background-position: 0% 50%;}
+  to { background-position: 100% 100%;}
+}
+
+
+
+
+
+
+.bodyEventos{
+  background-color: #000000;
+}
  
 header{ 
     display: flex; /*mando todo el menu a una fila*/
@@ -24,6 +50,7 @@ header{
     justify-content: space-between;
     align-content: center;
     padding: 15px 15px;
+    background-color: #000000;
     
 }
 
@@ -34,19 +61,7 @@ header{
     padding: 0.5rem 1rem;
 }
 
-.color-change-2x {/*clase de la animacion de fondo del menu de botones en header*/
-	-webkit-animation: color-change-2x 2s linear infinite alternate both;
-	        animation: color-change-2x 2s linear infinite alternate both;
-}
 
-@keyframes color-change-2x { /*animacion del menu de header*/
-    0% {
-      background: #6e3806;
-    }
-    100% {
-      background: #610659;
-    }
-  }
 
 .efectoLogo:hover { /*logotipo de la pagina en general(clean)*/
 	-webkit-animation: efectoLogo 0.9s both;
@@ -100,7 +115,7 @@ header{
 
 .subrayado{ /*le saco el subrayado a los botones del menu*/
   margin-left: 2rem;
-  background-color: white;
+  background: rgb(228,14,14);
   text-decoration: none;
   color: black;
   padding: 0.5rem 1.5rem;
@@ -117,8 +132,9 @@ header{
   
 }
 .subrayado:hover{ /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
-  background-color: yellow;
+  background: linear-gradient(180deg, rgba(228,14,14,1) 25%, rgba(251,252,69,1) 100%);
   border: solid black 1px;
+  color: #000000;
   }
 
 
@@ -221,6 +237,7 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
 .bodyIndex{
     display: grid; /*armo la grilla para el cuerpo del index*/
     grid-template-rows: auto 1fr auto; /*armo 3 filas*/
+    background-color: #000000;
 }
 
 
@@ -253,11 +270,6 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
           #0c1114);
 
 }
-
-
-
-
-
 
 
 footer{
