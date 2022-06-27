@@ -441,10 +441,18 @@ footer {
   .header__menuBotones {
     /*ul*/
     list-style: none;
-    display: block;
+    display: flex;
     flex-direction: column;
     /*hago una sola columna de logotipo y los botones*/
-    padding: 0.5rem 1rem;
+    padding: 7px 5px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 1rem;
+  }
+
+  li {
+    /*menu botones para que se separen un poco*/
+    margin: 0.5rem;
   }
 
   .hero__contenedor {
