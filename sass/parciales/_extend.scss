@@ -4,20 +4,20 @@
     text-align: center;
     font-size: 16px;
     cursor: pointer;
-    background-color: rgb(57, 229, 235)
+    background-color: rgb(29, 26, 26)
   }
   
   .botonContacto_1{
     @extend .botonContacto;
-    background-color: rgb(37, 187, 192);
+    background-color: rgb(73, 81, 82);
   }
   
   .botonContacto_2{
     @extend .botonContacto;
-    background-color: rgb(46, 136, 163);
+    background-color: rgb(94, 104, 107);
   }
 
   .botonContacto:hover{ /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
-    background-color: rgb(247, 247, 239);
+    background-color: rgb(5, 5, 4);
     border: solid black 1px;
     }

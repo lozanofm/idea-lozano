@@ -227,11 +227,13 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     justify-content: center;
     flex-wrap: wrap;
     grid-gap: 10px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
 .bordeAccesorio:hover{ /*se pone amarillo el fondo cuando pasamos por arriba*/
-  outline: dotted black 5px;
+  outline: solid black 5px;
   }
 
 .bodyIndex{
@@ -257,17 +259,21 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
 }
 
 .cuadroContacto{/*en la seccion contacto*/
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 25px;
   border: solid;
-  width: 650px;
-  margin-left: 100px;
+  width: 660px;
+  margin-left: 90px;
   margin-bottom: 50px;
-  border-image-slice: 1;
-  border-width: 3px;
+  border-image-slice: 5;
+  border-width: 7px;
   border-image-source: 
       linear-gradient(
           60deg,
-          #f7f4f8,
-          #0c1114);
+          #3105f5,
+          #3cabf0);
 
 }
 

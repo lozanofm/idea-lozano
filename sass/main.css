@@ -50,47 +50,47 @@
   text-align: center;
   font-size: 16px;
   cursor: pointer;
-  background-color: rgb(57, 229, 235);
+  background-color: rgb(29, 26, 26);
 }
 
 .botonContacto_1 {
-  background-color: rgb(37, 187, 192);
+  background-color: rgb(73, 81, 82);
 }
 
 .botonContacto_2 {
-  background-color: rgb(46, 136, 163);
+  background-color: rgb(94, 104, 107);
 }
 
 .botonContacto:hover, .botonContacto_1:hover, .botonContacto_2:hover {
   /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
-  background-color: rgb(247, 247, 239);
+  background-color: rgb(5, 5, 4);
   border: solid black 1px;
 }
 
 /*extend*/
 /*aplico maps en la seccion contactos, en los botones del final*/
 .a {
-  color: #f00808;
+  color: #ffeaea;
 }
 
 /*aplico maps en la seccion contactos, en los botones del final*/
 .b {
-  color: #da4a07;
+  color: #ccda07;
 }
 
 /*aplico maps en la seccion contactos, en los botones del final*/
 .c {
-  color: #d9f00b;
+  color: #0bf0d1;
 }
 
 /*aplico maps en la seccion contactos, en los botones del final*/
 .tamFuente {
-  color: 30px;
+  color: 20px;
 }
 
 .fase {
   /*boton seccion contacto/ boton intermedio, llamo una propiedad con map-get*/
-  font-size: 30px;
+  font-size: 20px;
 }
 
 /*extend*/
@@ -334,11 +334,13 @@ aside {
   justify-content: center;
   flex-wrap: wrap;
   grid-gap: 10px 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .bordeAccesorio:hover {
   /*se pone amarillo el fondo cuando pasamos por arriba*/
-  outline: dotted black 5px;
+  outline: solid black 5px;
 }
 
 .bodyIndex {
@@ -369,13 +371,17 @@ aside {
 
 .cuadroContacto {
   /*en la seccion contacto*/
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 25px;
   border: solid;
-  width: 650px;
-  margin-left: 100px;
+  width: 660px;
+  margin-left: 90px;
   margin-bottom: 50px;
-  border-image-slice: 1;
-  border-width: 3px;
-  border-image-source: linear-gradient(60deg, #f7f4f8, #0c1114);
+  border-image-slice: 5;
+  border-width: 7px;
+  border-image-source: linear-gradient(60deg, #3105f5, #3cabf0);
 }
 
 footer {
