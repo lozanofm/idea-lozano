@@ -17,26 +17,12 @@
 
 .bienvenidos{
   font-size: 3em;
-  letter-spacing: 1px;
   font-weight: bold;
-  font-family: 'Roboto Condensed', sans-serif;
-  background: url(../imagenes/raya.jpg);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: text 7.5s linear infinite;
+  font-family: 'Roboto Condensed ital', sans-serif;
   text-align: center;
   margin-top: 10px;
+  color: white;
 }
-
-@keyframes text{
-  from { background-position: 0% 50%;}
-  to { background-position: 100% 100%;}
-}
-
-
-
-
 
 
 .bodyEventos{
@@ -115,7 +101,7 @@ header{
 
 .subrayado{ /*le saco el subrayado a los botones del menu*/
   margin-left: 2rem;
-  background: rgb(228,14,14);
+  background: rgb(94, 91, 91);
   text-decoration: none;
   color: black;
   padding: 0.5rem 1.5rem;
@@ -132,13 +118,13 @@ header{
   
 }
 .subrayado:hover{ /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
-  background: linear-gradient(180deg, rgba(228,14,14,1) 25%, rgba(251,252,69,1) 100%);
+  background: linear-gradient(180deg, rgb(94, 91, 91) 25%, black 100%);
   border: solid black 1px;
-  color: #000000;
+  color: white;
   }
 
 
-#grilla{ /*corresponde al cuadro de LA SECCCION EVENTOS, es el esqueleto/maqueta de la estructura*/
+#grilla{ /*corresponde al cuadro de LA SECCCION INFORMACION, es el esqueleto/maqueta de la estructura*/
         height: 100vh;
         display: grid;
         grid-template-rows: 100px 1fr 1fr 75px; 
@@ -153,19 +139,19 @@ header{
     
 }
 
-section#gym{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+section#gym{/*corresponde al cuadro de LA SECCCION INFORMACION*/
     grid-area: gym;
     background-color: rgb(93, 155, 212);
     overflow: hidden;
     overflow: scroll;
 
 }
-section#productos{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+section#productos{/*corresponde al cuadro de LA SECCCION INFORMACION*/
     grid-area: productos;
     background-color: rgb(192, 180, 192);
 }
 
-section#servicios{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+section#servicios{/*corresponde al cuadro de LA SECCCION INFORMACION*/
     grid-area: servicios;
     background-color: rgb(15, 131, 92); 
     display: flex;
@@ -175,19 +161,19 @@ section#servicios{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     overflow: scroll;
 
 }
-section#dumbell{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+section#dumbell{/*corresponde al cuadro de LA SECCCION INFORMACION*/
     grid-area: dumbell;
     background-color: blueviolet;
     overflow: hidden;
     overflow: scroll;
 }
 
-section#barra{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+section#barra{/*corresponde al cuadro de LA SECCCION INFORMACION*/
     grid-area: barra;
     background-color: darkolivegreen;
 }
 
-aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+aside{/*corresponde al cuadro de LA SECCCION INFORMACION*/
     grid-area: aside;
     display: flex;
     align-items: center;
@@ -195,7 +181,7 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     overflow: hidden;
 }
 
-.borderE {/*borde del cuadro de la seccion EVENTOS*/
+.borderE {/*borde del cuadro de la seccion INFORMACION*/
     border:$contornoNegro; /*aca utilice una variable que esta guardada en la carpeta variables.scss y la invoco al principio de main*/
 }
 
@@ -208,7 +194,7 @@ aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
     background-image: url(../imagenes/fondofotos.jpg);
     
 }
-.fondoEjercicio{/*fondo ejercicios*/
+.fondoEjercicio{/*fondo ejercicios EN INFORMACION*/
   background-image: url(../imagenes/fondoejercicios3.jpg);
 }
 
@@ -300,8 +286,17 @@ footer{
       grid-template-columns: 1fr;
   }
 
+.bienvenidos{
+display: none;
+}
 
-  #grilla{ /*corresponde al cuadro de LA SECCCION EVENTOS*/
+.container-fluid{ /*desaparece el carrusel*/
+  display: none;
+}
+
+
+
+  #grilla{ /*corresponde al cuadro de LA SECCCION INFORMACION*/
       grid-template-columns:1fr; /*PASA TODO A 1 SOLA COLUMNA*/
       grid-template-areas:
       "gym"
@@ -311,16 +306,16 @@ footer{
     
   }
 
-  section#barra{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+  section#barra{/*corresponde al cuadro de LA SECCCION INFORMACION*/
       display: none; /*desaparece en el formato celular*/
 
   }
-  section#servicios{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+  section#servicios{/*corresponde al cuadro de LA SECCCION INFORMACION*/
       display: none; /*desaparece en el formato celular*/
               
   }
 
-  aside{/*corresponde al cuadro de LA SECCCION EVENTOS*/
+  aside{/*corresponde al cuadro de LA SECCCION INFORMACION*/
       display: none; /*desaparece en el formato celular*/
 
   }
@@ -328,7 +323,7 @@ footer{
   header{ 
       display: flex; 
       flex-direction: column;
-      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      background: black;
       justify-content: center; /*centro el logotipo y los botones*/
       padding: 15px 15px;
                
