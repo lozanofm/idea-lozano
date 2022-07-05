@@ -15,7 +15,13 @@
     box-sizing: border-box;
 }
 
-.bienvenidos{
+/*TIPOGRAFIAS*/
+.tipografiaRoboto{
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/*TITULOS*/
+.bienvenidos{ /*titulo h1 en index*/
   font-size: 3em;
   font-weight: bold;
   font-family: 'Roboto Condensed ital', sans-serif;
@@ -24,11 +30,47 @@
   color: white;
 }
 
+.tituloContactos{/*TITULO EN SECCION PRINCIPIANTES DE LA PAGINA PRINCIPAL CONTACTOS*/
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  color: white;
+}
 
-.bodyEventos{
+.subtituloContacto{ /*SUBTITULO SECCION CONTACTO, EN PERFILES*/
+  font-family: 'Oswald', sans-serif;
+  color: rgb(17, 247, 235);
+  text-align: center;
+    
+}
+
+/*BACKGROUND DE LAS SECCIONES*/
+.bodyEventos{ /*fondo de seccion eventos*/
   background-color: #000000;
 }
- 
+
+.seccionfotos{ /*fondo de seccion fotos*/
+  background-image: url(../imagenes/fondofotos.jpg);
+  
+}
+.fondoEjercicio{/*fondo de seccion informacion*/
+background-image: url(../imagenes/fondoejercicios3.jpg);
+}
+
+.seccionContacto{ /*fondo de seccion contacto*/
+background-image: url(../imagenes/fondoformulario.jpg);
+
+}
+
+.fondoAccesorios{ /*fondo de seccion accesorios*/
+background-image: url(../imagenes/fondoaccesorios.jpg);
+    
+ }
+
+.seccionPrincipiantes{ /*fondo perfil principiante*/
+background-image: url(../imagenes/fondofaseprincipiantes.jpg);
+}   
+
+/*HEADER*/
 header{ 
     display: flex; /*mando todo el menu a una fila*/
     flex-wrap: wrap;    
@@ -48,7 +90,7 @@ header{
 }
 
 
-
+/*EFECTO LOGOTIPO CLEAN*/
 .efectoLogo:hover { /*logotipo de la pagina en general(clean)*/
 	-webkit-animation: efectoLogo 0.9s both;
 	        animation: efectoLogo 0.9s both;
@@ -66,7 +108,13 @@ header{
     }
   }
 
-  .vibrate-1:hover { /*hago vibrar los botones del menu al pasar por arriba*/
+  /*BOTONES*/
+
+  .botonesFase{ /*UBICADOS EN LA SECCION CONTACTO*/
+    text-decoration: none;
+  }
+
+  .vibrate-1:hover { /*hago vibrar los botones del menu PRINCIPAL DEL SITE al pasar por arriba*/
 	-webkit-animation: vibrate-1 0.3s linear infinite both;
 	        animation: vibrate-1 0.3s linear infinite both;
 
@@ -100,14 +148,14 @@ header{
 }
 
 .subrayado{ /*le saco el subrayado a los botones del menu*/
-  margin-left: 2rem;
+  margin-left: 0.3rem;
   background: rgb(94, 91, 91);
   text-decoration: none;
   color: black;
   padding: 0.5rem 1.5rem;
 
   &__local{ /*color negro en el boton de la pagina donde estamos posicionados*/
-      margin-left: 2rem;
+      margin-left: 0.3rem;
       background-color: black;
       text-decoration: none;
       color: white;
@@ -117,6 +165,7 @@ header{
   }
   
 }
+
 .subrayado:hover{ /*se pone amarillo el fondo de los botones del menu cuando pasamos por arriba*/
   background: linear-gradient(180deg, rgb(94, 91, 91) 25%, black 100%);
   border: solid black 1px;
@@ -124,6 +173,50 @@ header{
   }
 
 
+/*CONTENEDORES*/
+  .cuadroContacto{ /*CONTENEDOR EN LA SECCION CONTACTOS, EN LOS 3 BOTONES DE PERFILES*/
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    justify-content: center;
+    align-content:center ;
+    justify-items: center;
+    align-items: center;
+ 
+  }
+
+  .accesorios1{ /*hijo en seccion accesorios(ES UN SUB CONTENEDOR)*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 10px 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+
+.bodyIndex{
+  display: grid; /*armo la grilla para el cuerpo del index*/
+  grid-template-rows: auto 1fr auto; /*armo 3 filas*/
+  background-color: #000000;
+}
+
+.sectionContenedor{ /*contiene las 3 columnas del index abajo*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);/*3 columnas de 1 fraccion*/
+  padding: 20px 25px;
+  column-gap: 2rem;
+  background-color: black;
+  align-content: center;
+  text-align:start;
+  
+}
+
+.sectionContenedor__imagen{ /*en el index*/
+  position: relative;
+}
+
+/*ESTRUCTURA GENERAL EN LA SECCION INFORMACION*/
 #grilla{ /*corresponde al cuadro de LA SECCCION INFORMACION, es el esqueleto/maqueta de la estructura*/
         height: 100vh;
         display: grid;
@@ -133,9 +226,9 @@ header{
              "gym gym gym"
              "productos servicios aside"
              "productos servicios aside"
-             "productos dumbell barra";
+             "productos dumbell barra"; 
     
-      background-color: rgb(214, 228, 24); 
+      background-color: black; 
     
 }
 
@@ -181,89 +274,18 @@ aside{/*corresponde al cuadro de LA SECCCION INFORMACION*/
     overflow: hidden;
 }
 
-.borderE {/*borde del cuadro de la seccion INFORMACION*/
+/*CONTORNO NEGRO EN TODA LA ESTRUCTURA DE LA SECCION EVENTOS*/
+.borderE {
     border:$contornoNegro; /*aca utilice una variable que esta guardada en la carpeta variables.scss y la invoco al principio de main*/
 }
 
-.tipografiaRoboto{
-    font-family: 'Barlow Semi Condensed', sans-serif;
-    
-}
-
-.seccionfotos{ /*fondo fotos*/
-    background-image: url(../imagenes/fondofotos.jpg);
-    
-}
-.fondoEjercicio{/*fondo ejercicios EN INFORMACION*/
-  background-image: url(../imagenes/fondoejercicios3.jpg);
-}
-
-.seccionContacto{ /*fondo contatco*/
-  background-image: url(../imagenes/fondoformulario.jpg);
-
-}
-
-.fondoAccesorios{ /*fondo accesorios*/
-  background-image: url(../imagenes/fondoaccesorios.jpg);
-      
-   }
-
-.accesorios1{ /*hijo en seccion accesorios*/
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    grid-gap: 10px 15px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-
-.bordeAccesorio:hover{ /*se pone amarillo el fondo cuando pasamos por arriba*/
+/*CONTORNO NEGRO EN LA ESTRUCTURA DE LA SECCION ACCESORIOS*/
+.bordeAccesorio:hover{ /*se activa un contorno negro cuando pasamos por arriba de cada foto*/
   outline: solid black 5px;
   }
 
-.bodyIndex{
-    display: grid; /*armo la grilla para el cuerpo del index*/
-    grid-template-rows: auto 1fr auto; /*armo 3 filas*/
-    background-color: #000000;
-}
 
-
-.sectionContenedor{ /*contiene las 3 columnas del index abajo*/
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);/*3 columnas de 1 fraccion*/
-  padding: 20px 25px;
-  column-gap: 2rem;
-  background-color: black;
-  align-content: center;
-  text-align:start;
-  
-}
-
-.sectionContenedor__imagen{ /*en el index*/
-  position: relative;
-}
-
-.cuadroContacto{/*en la seccion contacto*/
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  line-height: 25px;
-  border: solid;
-  width: 660px;
-  margin-left: 90px;
-  margin-bottom: 50px;
-  border-image-slice: 5;
-  border-width: 7px;
-  border-image-source: 
-      linear-gradient(
-          60deg,
-          #3105f5,
-          #3cabf0);
-
-}
-
-
+/*FOOTER*/
 footer{
     display: flex;
     justify-content: center;
@@ -330,7 +352,6 @@ display: none;
   }    
   .hero {
       display: none;
-
          
   }
 
@@ -371,7 +392,7 @@ display: none;
   
   }
 
-  .cuadroContacto{/*seccion contacto botones de abajo*/
+  .cuadroContacto{/*seccion CONTACTO botones de abajo*/
     display: none;
   }
 

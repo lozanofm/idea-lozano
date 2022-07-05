@@ -2,7 +2,8 @@ $botonesIndex: ( /*aplico maps en la seccion contactos, en los botones del final
     "a": #ffeaea, 
     "b": #ccda07,
     "c": #0bf0d1,
-    tamFuente: 20px
+    tamFuente: 12px
+    
 );
 
 @each $color, $value in $botonesIndex{/*aplico maps en la seccion contactos, en los botones del final*/

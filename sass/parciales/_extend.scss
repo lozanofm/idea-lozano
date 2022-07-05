@@ -1,10 +1,11 @@
 .botonContacto  { /*seccion contacto*/
-    border: $contornoNegro;
-    padding: 15px 30px;
-    text-align: center;
-    font-size: 16px;
-    cursor: pointer;
+
+    width: 215px;  
+    margin: 5px;
+    text-align:center;  
+    border: $contornoNegro;    
     background-color: rgb(29, 26, 26)
+    
   }
   
   .botonContacto_1{
