@@ -33,7 +33,7 @@
 }
 
 .h1titulos2 {
-  /*titulos/encabezados en seccion ejercicios*/
+  /*titulos/encabezados en seccion informacion*/
   /*titulos/encabezados en seccion eventos*/
   text-align: center;
   font-size: 25px;
@@ -396,8 +396,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-self: flex-end;
   background-color: black;
-  padding: 15px 15px;
+  height: 50px;
 }
 
 .footer__logo {
@@ -457,10 +458,6 @@ footer {
     padding: 15px 15px;
   }
 
-  .hero {
-    display: none;
-  }
-
   .header__menuBotones {
     /*ul*/
     list-style: none;
@@ -476,10 +473,6 @@ footer {
   li {
     /*menu botones para que se separen un poco*/
     margin: 0.5rem;
-  }
-
-  .hero__contenedor {
-    display: none;
   }
 
   .sectionContenedor {
@@ -501,14 +494,34 @@ footer {
     display: none;
   }
 }
-@media (min-width: 992px) {
-  .alto-100 {
-    height: 100vh;
-  }
+.h1titulos {
+  display: none;
 }
-@media screen and (max-width: 799px) {
-  .cuadroContacto {
-    /*seccion contacto botones de abajo*/
+
+@media screen and (max-width: 1024px) {
+  #grilla {
+    /*corresponde al cuadro de LA SECCCION INFORMACION*/
+    grid-template-columns: 1fr;
+    /*PASA TODO A 1 SOLA COLUMNA*/
+    grid-template-areas: "gym" "productos" "dumbell";
+    background-color: rgb(8, 8, 99);
+  }
+
+  section#barra {
+    /*corresponde al cuadro de LA SECCCION INFORMACION*/
     display: none;
+    /*desaparece en el formato celular*/
+  }
+
+  section#servicios {
+    /*corresponde al cuadro de LA SECCCION INFORMACION*/
+    display: none;
+    /*desaparece en el formato celular*/
+  }
+
+  aside {
+    /*corresponde al cuadro de LA SECCCION INFORMACION*/
+    display: none;
+    /*desaparece en el formato celular*/
   }
 }/*# sourceMappingURL=main.css.map */
